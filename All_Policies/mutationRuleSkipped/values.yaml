@@ -1,0 +1,7 @@
+policies:
+  - name: mutate-emptydir
+    rules:
+      - name: setDefault
+        values:
+          ruleParameters.data.emptydirVolumeDefaultSize: "500Mi"
+        

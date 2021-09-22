@@ -1,0 +1,12 @@
+name: require-pdb
+policies:
+  -  require_pdb.yaml
+resources:
+  -  resource.yaml
+variables: values.yaml
+results:
+  - policy: require-pdb
+    rule: require-pdb
+    resource: mydeploy
+    kind: Deployment
+    result: fail

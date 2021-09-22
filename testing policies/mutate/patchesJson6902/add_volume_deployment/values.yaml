@@ -1,0 +1,6 @@
+policies:
+  - name: add-volume
+    resources:
+    - name: mydeploy
+      values:
+        value: enabled

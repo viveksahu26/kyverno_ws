@@ -1,0 +1,12 @@
+policies:
+  - name: cm-array-example
+    rules:
+    - name: validate-role-annotation
+      values:
+        allowed-roles: |-
+          cluster-admin
+          cluster-operator
+          tenant-admin 
+
+
+#allowed-roles: "[\"cluster-admin\", \"cluster-operator\", \"tenant-admin\"]"

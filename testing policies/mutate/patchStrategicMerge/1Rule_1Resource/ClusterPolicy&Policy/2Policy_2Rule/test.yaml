@@ -1,0 +1,95 @@
+name: add-nodeselector
+policies:
+  - policy.yaml
+resources:
+  - resource.yaml
+results:
+  - policy: add-nodeselector
+    rule: add-nodeselector
+    resource: myapp-pod
+    patchedResource: patch1.yaml
+    kind: Pod
+    namespace: testing
+    status: pass
+  - policy: add-nodeselector
+    rule: add-nodeselector
+    resource: myapp-pod
+    patchedResource: patch.yaml
+    kind: Pod
+    namespace: practice
+    status: pass
+  - policy: add-nodeselector
+    rule: add-nodeselector
+    resource: myapp-pod-1
+    patchedResource: patch2.yaml
+    kind: Pod
+    namespace: practice
+    status: pass
+  - policy: add-nodeselector
+    rule: add-nodeselector
+    resource: myapp-pod-2
+    patchedResource: patch3.yaml
+    kind: Pod
+    namespace: practice
+    status: fail
+  - policy: add-nodeselector
+    rule: add-nodeselector
+    resource: myapp-pod-3
+    patchedResource: patch4.yaml
+    kind: Deployment
+    namespace: practice
+    status: skip
+
+  - policy: add-ndots
+    rule: add-ndots
+    resource: myapp-pod
+    patchedResource: patches1.yaml
+    kind: Pod
+    namespace: testing
+    status: pass
+  - policy: add-ndots
+    rule: add-ndots
+    resource: myapp-pod
+    patchedResource: patches.yaml
+    kind: Pod
+    namespace: practice
+    status: pass
+  - policy: add-ndots
+    rule: add-ndots
+    resource: myapp-pod-1
+    patchedResource: patches2.yaml
+    kind: Pod
+    namespace: practice
+    status: pass
+  - policy: add-ndots
+    rule: add-ndots
+    resource: myapp-pod-2
+    patchedResource: patches3.yaml
+    kind: Pod
+    namespace: practice
+    status: fail
+  - policy: add-ndots
+    rule: add-ndots
+    resource: myapp-pod-3
+    patchedResource: patches4.yaml
+    kind: Deployment
+    namespace: practice
+    status: skip
+  
+
+
+  # - policy: add-ndots
+  #   rule: add-ndots
+  #   resource: myapp-pod
+  #   patchedResource: patch2.yaml
+  #   kind: Pod
+  #   namespace: testing
+  #   status: pass
+  #  - policy: add-ndots
+  #   rule: add-ndots
+  #   resource: myapp-pod
+  #   patchedResource: patch3.yaml
+  #   kind: Pod
+  #   namespace: practice
+  #   status: pass
+

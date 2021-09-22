@@ -1,0 +1,21 @@
+name: add-nodeselector
+policies:
+  - policy.yaml
+resources:
+  - resource.yaml
+results:
+  - policy: testing/add-label
+    rule: add-label
+    resource: myapp-pod
+    patchedResource: svcpatch.yaml
+    kind: Service
+    namespace: testing
+    status: fail
+  - policy: testing/add-label
+    rule: add-label
+    resource: myapp-pod
+    patchedResource: podpatch.yaml
+    kind: Pod
+    namespace: testing
+    status: pass
+

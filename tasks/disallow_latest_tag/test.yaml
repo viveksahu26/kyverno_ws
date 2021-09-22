@@ -1,0 +1,14 @@
+name: require-labels
+policies:
+  -  policy.yaml
+resources:
+  -  resource.yaml
+results:
+  - policy: require-labels
+    rule: match-labels
+    resource: myapp-pod
+    status: pass
+  - policy: require-labels
+    rule: match-labels
+    resource: my-service
+    status: skip

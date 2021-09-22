@@ -1,0 +1,59 @@
+name: add-nodeselector
+policies:
+  - policy.yaml
+resources:
+  - resource.yaml
+results:
+  - policy: default/add-nodeselector
+    rule: add-nodeselector
+    resource: myapp-pod-1
+    patchedResource: patch2.yaml
+    kind: Pod
+    namespace: default
+    status: pass
+  - policy: practice/add-nodeselector
+    rule: add-nodeselector
+    resource: myapp-pod
+    patchedResource: patch.yaml
+    kind: Pod
+    namespace: practice
+    status: pass
+  - policy: practice/add-nodeselector
+    rule: add-nodeselector
+    resource: myapp-pod-2
+    patchedResource: patch3.yaml
+    kind: Pod
+    namespace: practice
+    status: fail
+  - policy: testing/add-nodeselector
+    rule: add-nodeselector
+    resource: myapp-pod-4
+    patchedResource: patch1.yaml
+    kind: Pod
+    namespace: testing
+    status: skip
+  - policy: testing/add-nodeselector
+    rule: add-nodeselector
+    resource: myapp-pod-3
+    patchedResource: patch4.yaml
+    kind: Pod
+    namespace: testing
+    status: skip
+  
+
+
+  # - policy: add-ndots
+  #   rule: add-ndots
+  #   resource: myapp-pod
+  #   patchedResource: patch2.yaml
+  #   kind: Pod
+  #   namespace: testing
+  #   status: pass
+  #  - policy: add-ndots
+  #   rule: add-ndots
+  #   resource: myapp-pod
+  #   patchedResource: patch3.yaml
+  #   kind: Pod
+  #   namespace: practice
+  #   status: pass
+

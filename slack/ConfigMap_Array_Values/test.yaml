@@ -1,0 +1,12 @@
+name: cm-array-example
+policies:
+  - cm_array_example.yaml
+resources:
+  - resource.yaml
+variables: values1.yaml
+results:
+  - policy: cm-array-example
+    rule: validate-role-annotation
+    resource: mydeploy
+    kind: Deployment
+    result: fail

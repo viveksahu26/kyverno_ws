@@ -1,0 +1,19 @@
+name: validate-userid-groupid-fsgroup
+policies:
+  -  restrict_usergroup_fsgroup_id.yaml
+resources:
+  -  resource.yaml
+results:
+  - policy: validate-userid-groupid-fsgroup
+    rule: validate-userid
+    resource: security-context-demo
+    status: pass
+  - policy: validate-userid-groupid-fsgroup
+    rule: validate-groupid
+    resource: security-context-demo
+    status: pass
+  - policy: validate-userid-groupid-fsgroup
+    rule: validate-fsgroup
+    resource: security-context-demo
+    status: pass
+  

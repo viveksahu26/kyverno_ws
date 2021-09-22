@@ -1,0 +1,23 @@
+name: check-image-pull-secret
+policies:
+  -  policy.yaml
+resources:
+  -  resource.yaml
+results:
+  - policy: check-image-pull-secret
+    rule: check-container-image
+    resource: pod-with-nginx-allowed-registory
+    kind: Pod
+    result: pass
+  - policy: check-image-pull-secret
+    rule: check-container-image
+    resource: pod-with-nginx-disallowed-registory
+    kind: Pod
+    result: fail
+  - policy: check-image-pull-secret
+    rule: check-container-image
+    resource: pod-with-httpd-allowed-registory
+    kind: Pod
+    result: pass
+  
+  

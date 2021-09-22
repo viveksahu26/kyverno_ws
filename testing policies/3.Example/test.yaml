@@ -1,0 +1,11 @@
+name: block-updates-deletes
+policies:
+  -  block-updates-deletes.yaml
+resources:
+  -  resource.yaml
+results:
+  - policy: block-updates-deletes
+    rule: block-updates-deletes
+    resource: protected
+    status: fail
+  

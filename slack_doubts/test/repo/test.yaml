@@ -1,0 +1,15 @@
+
+results:
+  - status: pass
+    policy: disallow-latest-tag
+    resource: myapp-pod
+    rule: require-image-tag
+  - policy: disallow-latest-tag
+    rule: validate-image-tag
+    resource: myapp-pod
+    status: pass
+resources:
+  -  resource.yaml
+policies:
+  -  policy.yaml
+name: disallow_latest_tag

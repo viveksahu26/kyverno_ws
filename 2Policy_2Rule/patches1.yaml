@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myapp-pod
+  labels:
+    foo: bar
+  namespace: testing
+spec:
+  containers:
+  - name: nginx
+    image: nginx:latest
+  dnsConfig:
+    options:
+    - name: ndots
+      value: "1"

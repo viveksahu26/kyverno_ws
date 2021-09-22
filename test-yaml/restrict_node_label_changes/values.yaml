@@ -1,0 +1,8 @@
+policies:
+  - name: protect-node-label-foo
+    rules:
+    - name: prevent-label-key-removal
+    resources:
+    - name: minikube
+      values:
+        request.operation: UPDATE

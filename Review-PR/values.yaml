@@ -1,0 +1,6 @@
+policies:
+  - name: cert-manager-limit-dnsnames
+    resources:
+    - name: letsencrypt-crt
+      values:
+        request.object.spec.dnsNames | length(@): "1"

@@ -1,0 +1,14 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  creationTimestamp: null
+  name: myrb
+  namespace: practice
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: testing
+subjects:
+- apiGroup: rbac.authorization.k8s.io
+  kind: User
+  name: jack

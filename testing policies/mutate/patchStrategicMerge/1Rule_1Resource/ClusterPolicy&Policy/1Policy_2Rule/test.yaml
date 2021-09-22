@@ -1,0 +1,79 @@
+name: add-nodeselector
+policies:
+  - policy.yaml
+resources:
+  - resource.yaml
+results:
+  - policy: add-nodeselector
+    rule: add-ndots
+    resource: myapp-pod
+    patchedResource: patch1.yaml
+    kind: Pod
+    status: pass
+  - policy: add-nodeselector
+    rule: add-nodeselector
+    resource: myapp-pod
+    patchedResource: patch1.yaml
+    kind: Pod
+    status: pass
+  
+
+  - policy: add-nodeselector
+    rule: add-nodeselector
+    resource: myapp-pod
+    patchedResource: patch.yaml
+    kind: Pod
+    namespace: practice
+    status: pass
+  - policy: add-nodeselector
+    rule: add-ndots
+    resource: myapp-pod
+    patchedResource: patch.yaml
+    kind: Pod
+    namespace: practice
+    status: pass
+
+  - policy: add-nodeselector
+    rule: add-nodeselector
+    resource: myapp-pod-1
+    patchedResource: patch2.yaml
+    kind: Pod
+    namespace: practice
+    status: pass
+  - policy: add-nodeselector
+    rule: add-ndots
+    resource: myapp-pod-1
+    patchedResource: patch2.yaml
+    kind: Pod
+    namespace: practice
+    status: pass
+
+  - policy: add-nodeselector
+    rule: add-nodeselector
+    resource: myapp-pod-2
+    patchedResource: patch3.yaml
+    kind: Pod
+    namespace: practice
+    status: fail
+  - policy: add-nodeselector
+    rule: add-ndots
+    resource: myapp-pod-2
+    patchedResource: patch3.yaml
+    kind: Pod
+    namespace: practice
+    status: fail
+
+  - policy: add-nodeselector
+    rule: add-nodeselector
+    resource: mydeploy
+    patchedResource: patch4.yaml
+    kind: Deployment
+    status: pass
+  - policy: add-nodeselector
+    rule: add-ndots
+    resource: mydeploy
+    patchedResource: patch4.yaml
+    kind: Deployment
+    status: pass
+
+

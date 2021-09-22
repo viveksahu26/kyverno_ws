@@ -1,0 +1,6 @@
+policies:
+  - name: restrict-service-account
+    rules:
+      - name: validate-service-account
+        values:
+          saMap.data.sa: "https://docker.io/nginx"

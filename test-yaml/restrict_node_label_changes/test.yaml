@@ -1,0 +1,17 @@
+name: protect-node-label-foo
+policies:
+  -  restrict_node_label_changes.yaml
+resources:
+  -  resource.yaml
+variables: values.yaml
+results:
+  - policy: protect-node-label-foo
+    rule: prevent-label-value-changes
+    resource: minikube
+    kind: Node
+    result: pass
+  - policy: protect-node-label-foo
+    rule: prevent-label-key-removal
+    resource: minikube
+    Kind: Node
+    result: pass

@@ -1,0 +1,19 @@
+apiVersion: kyverno.io/v1
+kind: ClusterPolicy
+metadata:
+  name: test1
+spec:
+  rules:
+  - name: test1
+    match:
+      resources:
+        kinds: 
+        - Pod
+        name: mypod1
+    mutate:
+      patchesJson6902: |-
+        - path: "/metadata/labels/app"
+          op: remove
+
+
+  

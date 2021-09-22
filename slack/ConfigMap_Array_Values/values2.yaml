@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: roles-dictionary
+  namespace: default
+data:
+  allowed-roles: |-
+    cluster-admin
+    cluster-operator
+    tenant-admin
+    super-user    

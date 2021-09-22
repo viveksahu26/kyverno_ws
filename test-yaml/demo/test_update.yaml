@@ -1,0 +1,22 @@
+name: enforce-pod-name
+policies:
+  -  policy.yaml
+resources:
+  -  resource.yaml
+results:
+  - policy: enforce-pod-name
+    rule: validate-name
+    kind: Pod
+    namespace: production
+    status: 
+      - pass
+      - fail
+      - pass
+ 
+  - policy: enforce-pod-name
+    rule: validate-name
+    Kind: Pod
+    namespace: testing
+    status: 
+      - pass
+      - fail

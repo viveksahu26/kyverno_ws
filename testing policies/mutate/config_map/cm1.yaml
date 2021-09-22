@@ -1,0 +1,6 @@
+apiVersion: v1
+data:
+  ship.properties: '{"type": "starship", "owner": "utany.corp"}'
+kind: ConfigMap
+metadata:
+  name: config-game

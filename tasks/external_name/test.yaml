@@ -1,0 +1,11 @@
+name: no-localhost-service
+policies:
+  -  disallow_localhost_services.yaml
+resources:
+  -  resource.yaml
+results:
+  - policy: no-localhost-service
+    rule: no-localhost-service
+    resource: my-service
+    status: fail
+  

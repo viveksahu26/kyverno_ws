@@ -1,0 +1,6 @@
+policies:
+  - name: replace-image-registry
+    rules:
+    - name: replace-image-registry
+      values:
+        /@: "docker-io-without-registry"

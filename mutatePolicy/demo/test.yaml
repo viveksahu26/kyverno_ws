@@ -1,0 +1,73 @@
+name: add-nodeselector
+policies:
+  - policy.yaml
+resources:
+  - resource.yaml
+results:
+  - policy: add-label
+    rule: add-label
+    resource: myapp-pod
+    patchedResource: patch1.yaml
+    kind: Pod
+    namespace: testing
+    status: pass
+  - policy: add-label
+    rule: add-label
+    resource: myapp-pod
+    patchedResource: patch.yaml
+    kind: Pod
+    namespace: practice
+    status: pass
+  - policy: add-label
+    rule: add-label
+    resource: myapp-pod1
+    patchedResource: patch2.yaml
+    kind: Pod
+    namespace: practice
+    status: pass
+  - policy: add-label
+    rule: add-label
+    resource: myapp-pod2
+    patchedResource: patch3.yaml
+    kind: Pod
+    namespace: practice
+    status: fail
+  - policy: add-label
+    rule: add-label
+    resource: mydeploy
+    patchedResource: patch4.yaml
+    kind: Deployment
+    namespace: practice
+    status: pass
+  
+
+  - policy: /add-label
+    rule: add-ndots
+    resource: myapp-pod
+    patchedResource: patches.yaml
+    kind: Pod
+    status: pass
+  - policy: practice/add-label
+    rule: add-ndots
+    resource: myapp-pod
+    patchedResource: patches1.yaml
+    kind: Pod
+    status: skip
+  - policy: practice/add-label
+    rule: add-ndots
+    resource: myapp-pod1
+    patchedResource: patches2.yaml
+    kind: Pod
+    status: pass
+  - policy: practice/add-label
+    rule: add-ndots
+    resource: myapp-pod2
+    patchedResource: patches3.yaml
+    kind: Pod
+    status: fail
+  - policy: practice/add-label
+    rule: add-ndots
+    resource: mydeploy
+    patchedResource: patches4.yaml
+    kind: Deployment
+    status: skip
