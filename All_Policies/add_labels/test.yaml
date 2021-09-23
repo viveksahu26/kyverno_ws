@@ -7,7 +7,7 @@ results:
   - policy: add-labels
     rule: add-labels
     resource: myapp-pod
-    patchedResource: patchedResource.yaml
+    patchedResource: patchedResource2.yaml
     kind: Pod
     namespace: default
     result: pass
