@@ -1,6 +1,0 @@
-policies:
-  - name: insert-pod-antiaffinity
-    resources:
-      - name: mydeploy
-        values: 
-          app: "myapp" 

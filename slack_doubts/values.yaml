@@ -1,7 +1,0 @@
-policies:
-  - name: any-all-preconditions
-    resources:
-      - name: busybox
-        values:
-          request.object.metadata.labels.color: bluejjj
-          request.object.metadata.labels.app: foo
