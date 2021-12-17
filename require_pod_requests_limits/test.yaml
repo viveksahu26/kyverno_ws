@@ -1,0 +1,11 @@
+name: require-requests-limits
+policies:
+  -  require_pod_requests_limits.yaml
+resources:
+  -  resource.yaml
+results:
+  - policy: require-requests-limits
+    rule: validate-resources
+    resource: myapp-pod
+    kind: Pod
+    result: pass

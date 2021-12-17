@@ -1,0 +1,11 @@
+name: require-labels
+policies:
+  -  require_labels.yaml
+resources:
+  -  resource.yaml
+results:
+  - policy: require-labels
+    rule: check-for-labels
+    resource: myapp-pod
+    kind: Pod
+    result: fail
